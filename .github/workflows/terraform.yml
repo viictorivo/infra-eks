@@ -1,0 +1,19 @@
+name: "Terraform"
+on:
+  workflow_dispatch:
+
+jobs:
+  Plan:
+    uses: viictorivo/OrderingSystem/.github/workflows/plan.yml@main
+    with:
+      gh_environment: dev
+    secrets:
+      cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+
+  Apply:
+    needs: Plan
+    uses: viictorivo/OrderingSystem/.github/workflows/apply.yml@main
+    with:
+      gh_environment: dev
+    secrets:
+      cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
