@@ -47,7 +47,7 @@ jobs:
         id: plan
         run: |
           terraform plan \
-          -var="node_role_arn=${{ secrets.NODE_ROLE_ARN }}"
+          -var="node_role_arn=${{ secrets.node_role_arn }}"
         continue-on-error: true
 
       - name: Terraform Plan Status
