@@ -9,6 +9,7 @@ jobs:
       gh_environment: dev
     secrets:
       cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+      node_role_arn: ${{ secrets.NODE_ROLE_ARN }}
 
   Apply:
     needs: Plan
@@ -17,3 +18,4 @@ jobs:
       gh_environment: dev
     secrets:
       cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
+      node_role_arn: ${{ secrets.NODE_ROLE_ARN }}
