@@ -10,6 +10,7 @@ jobs:
     uses: viictorivo/infra-eks-order-system-/.github/workflows/plan.yml@main
     with:
       gh_environment: dev
+      NODE_ROLE_ARN: ${{ secrets.NODE_ROLE_ARN }}
     secrets:
       cli_config_credentials_token: ${{ secrets.TF_API_TOKEN }}
 
