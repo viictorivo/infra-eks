@@ -1,10 +1,5 @@
 #######modules/eks/variables.tf
 
-variable "node_role_arn" {
-  description = "ARN of the IAM Role that will be associated with the Node Group"
-  type        = string
-}
-
 variable "aws_public_subnet" {}
 
 variable "vpc_id" {}
