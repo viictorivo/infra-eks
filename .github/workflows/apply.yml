@@ -17,6 +17,9 @@ on:
       cli_config_credentials_token:
         description: 'cli config credentials token'
         required: true
+      node_role_arn:
+        description: 'cli config credentials token'
+        required: true
 
 jobs:
   apply-plan:
