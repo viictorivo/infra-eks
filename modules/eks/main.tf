@@ -1,4 +1,4 @@
-resource "aws_eks_cluster" "order-system" {
+resource "aws_eks_cluster " "order-system" {
   name     = var.cluster_name
   role_arn = var.node_role_arn
   vpc_config {
@@ -11,16 +11,16 @@ resource "aws_eks_cluster" "order-system" {
 
 }
 
+data "aws_eks_cluster_auth" "basic_app_cluster_auth" {
+  name = aws_eks_cluster.basic_app_cluster.name
+}
+
 resource "aws_eks_node_group" "order-system" {
   cluster_name    = aws_eks_cluster.order-system.name
   node_role_arn   = var.node_role_arn
   node_group_name = var.node_group_name
   subnet_ids      = var.aws_public_subnet
   instance_types  = var.instance_types
-
-  remote_access {
-    source_security_group_ids = [aws_security_group.node_group_one.id]
-  }
 
   scaling_config {
     desired_size = var.scaling_desired_size
