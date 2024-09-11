@@ -1,6 +1,6 @@
 module "eks" {
   source                  = "./modules/eks"
-  node_role_arn           = secrets.NODE_ROLE_ARN
+  node_role_arn           = var.node_role_arn
   aws_public_subnet       = module.vpc.aws_public_subnet
   vpc_id                  = module.vpc.vpc_id
   cluster_name            = "module-eks-${random_string.suffix.result}"
