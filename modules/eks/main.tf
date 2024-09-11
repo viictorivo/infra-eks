@@ -1,4 +1,4 @@
-resource "aws_eks_cluster " "order-system" {
+resource "aws_eks_cluster" "order-system" {
   name     = var.cluster_name
   role_arn = var.node_role_arn
   vpc_config {
