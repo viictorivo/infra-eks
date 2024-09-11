@@ -11,8 +11,8 @@ resource "aws_eks_cluster" "order-system" {
 
 }
 
-data "aws_eks_cluster_auth" "basic_app_cluster_auth" {
-  name = aws_eks_cluster.basic_app_cluster.name
+data "aws_eks_cluster_auth" "order-system_auth" {
+  name = aws_eks_cluster.order-system.name
 }
 
 resource "aws_eks_node_group" "order-system" {
