@@ -8,9 +8,9 @@ module "eks" {
   endpoint_private_access = false
   public_access_cidrs     = ["0.0.0.0/0"]
   node_group_name         = "order-system"
-  scaling_desired_size    = 1
+  scaling_desired_size    = 3
   scaling_max_size        = 5
-  scaling_min_size        = 1
+  scaling_min_size        = 2
   instance_types          = ["t3.small"]
 }
 
