@@ -26,3 +26,7 @@ module "vpc" {
   rt_route_cidr_block     = "0.0.0.0/0"
 
 }
+
+module "rds" {
+  source = "./modules/rds"
+}
