@@ -45,11 +45,7 @@ jobs:
 
       - name: Terraform Plan
         id: plan
-        env:
-          DB_USER: ${{ secrets.DB_USER }}
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
-        run: |
-          terraform plan
+        run: terraform plan
         continue-on-error: true
 
       - name: Terraform Plan Status
