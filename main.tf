@@ -27,6 +27,3 @@ module "vpc" {
 
 }
 
-module "rds" {
-  source = "./modules/rds"
-}
