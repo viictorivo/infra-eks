@@ -3,10 +3,6 @@
 
 Projeto desenvolvido como trabalho final do curso Software Architecture da Pós-Tech Fiap 2024.
 
-## Sistema de processamento de video
-
-Requisitos para o desenvolvimento do projeto
-
 
 ## Link Video demonstração
 
